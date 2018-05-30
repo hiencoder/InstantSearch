@@ -70,7 +70,7 @@ public class LocalSearchActivity extends AppCompatActivity implements OnContactL
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribeWith(searchContact()));
-        
+
         /*source: có giá trị là gmail hoặc linkedin
         * Lấy tất cả contact khi chạy app.
         * Chỉ lấy về gmail*/
