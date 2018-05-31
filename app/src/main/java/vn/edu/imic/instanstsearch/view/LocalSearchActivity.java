@@ -49,6 +49,15 @@ public class LocalSearchActivity extends AppCompatActivity implements OnContactL
     private ContactAdapterFilter contactAdapterFilter;
     private List<Contact> listContact = new ArrayList<>();
     private ApiService apiService;
+
+    /*1. CompositeDisposable: Đc sử dụng để hủy bỏ các subscription trong pt onDestroy().
+    * 2. RxTextView.textChangeEvents: Kích hoạt 1 sự kiện bất cứ khi nào text được thay đổi
+    * trong ô edittext.
+    * 3. debounce(300, TimeUnit.MILLISECONDS): Phát ra truy vấn tìm kiếm, cứ 300 ms 1 lần.
+    * 4. distinctUntilChanged(): Không tìm kiếm tương tự một lần nữa.
+    * 5. fetchContacts(): Lấy data về bằng Http retrofit.
+    * 6. searchContacts() : Một Observer sẽ được gọi khi 1 truy vấn được phát ra.
+    * 7. mAdapter.getFilter().filter(): Gọi để lọc dữ liệu truy vấn trên ArrayList*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
