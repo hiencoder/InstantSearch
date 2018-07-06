@@ -18,4 +18,10 @@ public class LogUtils {
             Log.e(tag,message);
         }
     }
+
+    public static void i(String tag, String message){
+        if (message != null){
+            Log.i(tag,  message);
+        }
+    }
 }

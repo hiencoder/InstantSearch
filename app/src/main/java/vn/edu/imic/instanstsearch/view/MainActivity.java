@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openRemoteSearch() {
-        Intent iRemoteSearch = new Intent(this,RemoteSearchActivity.class);
+        Intent iRemoteSearch = new Intent(this,RemoteSearchActivityDagger.class);
         startActivity(iRemoteSearch);
     }
 
     private void openLocalSearch() {
-        Intent iLocalSearch = new Intent(this,LocalSearchActivity.class);
+        Intent iLocalSearch = new Intent(this,LocalSearchActivityDagger.class);
         startActivity(iLocalSearch);
     }
 
