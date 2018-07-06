@@ -98,6 +98,7 @@ public class RemoteSearchActivity extends AppCompatActivity implements OnContact
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(searchContacts()));
+
         disposable.add(observer);
 
         //Lần đầu truyền vào empty

@@ -51,6 +51,11 @@ public class ContactAdapterDagger extends RecyclerView.Adapter<ContactAdapterDag
         return listContact.size();
     }
 
+    public void setData(List<Contact> list){
+        listContact.clear();
+        listContact.addAll(list);
+        notifyDataSetChanged();
+    }
     public class ContactHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.img_thumbnail)
         ImageView imgThumbnail;

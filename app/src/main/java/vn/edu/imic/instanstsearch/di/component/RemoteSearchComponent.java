@@ -9,6 +9,8 @@ import vn.edu.imic.instanstsearch.di.module.RemoteSearchMvpModule;
 import vn.edu.imic.instanstsearch.di.qualifier.ActivityContext;
 import vn.edu.imic.instanstsearch.di.scope.ActivityScope;
 import vn.edu.imic.instanstsearch.view.RemoteSearchActivity;
+import vn.edu.imic.instanstsearch.view.RemoteSearchActivityDagger;
+
 @ActivityScope
 @Component(modules = {ContactAdapterModule.class, RemoteSearchMvpModule.class},
 dependencies = AppComponent.class)
@@ -16,5 +18,5 @@ public interface RemoteSearchComponent {
     @ActivityContext
     Context getContext();
 
-    void injectRemoteSearchActivity(RemoteSearchActivity remoteSearchActivity);
+    void injectRemoteSearchActivity(RemoteSearchActivityDagger remoteSearchActivity);
 }

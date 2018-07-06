@@ -33,7 +33,9 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".view.LocalSearchActivityDagger" />
-        <activity android:name=".view.RemoteSearchActivityDagger"></activity>
+        <activity android:name=".view.RemoteSearchActivityDagger"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
