@@ -111,7 +111,7 @@ public class RemoteSearchActivityDagger extends AppCompatActivity implements OnC
 
     @Override
     public void showData(List<Contact> listContact) {
-        Log.d(TAG, "showData: " + listContact.size());
+        LogUtils.d(TAG, "showData: " + listContact.size());
         contactAdapter.setData(listContact);
     }
 
